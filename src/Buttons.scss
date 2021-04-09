@@ -1,0 +1,21 @@
+.btn{
+    font-size: 0.9rem;
+    margin: 2rem;
+    border: none;
+    padding: 0.9em 2em;
+    border-radius:7px ;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover{
+        box-shadow: 0 0 10px #22222244;
+    }
+}
+
+.btn-large{
+    font-size: 1.3em;
+}
+.btn-small{
+    font-size: 0.7em;
+}
+
+
