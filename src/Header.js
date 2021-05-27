@@ -6,7 +6,7 @@ const Header = () => {
                 Where in the world?
             </h2>
             <span className='dark-mode'>
-                Dark Mode
+            <i className="fas fa-moon"> </i> Dark Mode
             </span>
             </div>
         </header>

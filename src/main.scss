@@ -57,7 +57,9 @@ body{
         }
         .dark-mode{
             font-weight: 600;
+            cursor: pointer;
         }
+
     }
 }
 
@@ -75,6 +77,10 @@ body{
     .search-bar{
         width: 100%;
         max-width: 350px;
+        &::after{
+            content: "fqsdqsd";
+            display: block;
+        }
     }
     .filter{
         padding-right: 2em;
@@ -86,7 +92,7 @@ body{
 .contries{
     display: grid;
     margin: 0 auto;
-    grid-template-columns: repeat(auto-fit,minmax(250px,400px));
+    grid-template-columns: repeat(auto-fit,minmax(250px,330px));
     justify-content: center;
     gap: 1rem;
     
@@ -98,6 +104,10 @@ body{
         position: relative;
         pointer-events: none;
         padding-bottom: 1.3rem;
+        &:hover,&:focus{
+            transform: scale(1.03);
+            transition: all 0.2s ease-in-out;
+        }
         .link{
             position: absolute;
             top: 0;

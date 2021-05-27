@@ -1,7 +1,7 @@
 const Search = () => {
     return ( 
         <div className="search container">
-            <input type='text' placeholder='Search for country...' className='search-bar'></input>
+            <input type='text' placeholder='Search for country...' className='search-bar' id='search-bar'></input>
             <select name="Continent" className='filter'>
                 <option value="Africa">Africa</option>
                 <option value="America">America</option>
@@ -12,5 +12,8 @@ const Search = () => {
         </div>
      );
 }
- 
+
 export default Search;
+
+
+
