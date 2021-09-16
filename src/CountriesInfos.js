@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-const CountriesInfos = (props) => {
-    const countries = props.countriesData;
+const CountriesInfos = ({countries}) => {
+    // const {countries} = props;
     console.log(countries);
     return ( 
         <main className='container'>

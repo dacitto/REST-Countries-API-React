@@ -1,7 +1,8 @@
-const Search = () => {
+const Search = ({setSearch}) => {
+
     return ( 
         <div className="search container">
-            <input type='text' placeholder='Search for country...' className='search-bar' id='search-bar'></input>
+            <input type='text' placeholder='Search for country...' className='search-bar' id='search-bar' onChange={(e)=>{setSearch(e.target.value)}}></input>
             <select name="Continent" className='filter'>
                 <option value="Africa">Africa</option>
                 <option value="America">America</option>

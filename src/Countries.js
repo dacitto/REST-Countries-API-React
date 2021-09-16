@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
-const Countries = (props) => {
-    const countries = props.countriesData;
+const Countries = ({countries}) => {
+    //const {countries} = props;
     return ( 
-        <main className='contries container'>
+        <main className='contries container dark-mode'>
             {countries.map((country)=>(
             <>
             <div className="countries-card">

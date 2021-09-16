@@ -1,14 +1,21 @@
 import {useState,useEffect}  from 'react';
 
-const useFetch = (url) => {
+const useFetch = (url,name) => {
     
     const [data,setData] = useState(null);
     const [isLoading,setIsLoading]= useState(true);
     const [error,setError]=useState(null);
-    
-    useEffect(()=>{
-      const abortCont = new AbortController();
 
+  
+    useEffect(()=>{
+      if(localStorage.getItem(name)){
+        setData(JSON.parse(localStorage.getItem(name)));
+        setIsLoading(false);
+        setError(null);
+        console.log("from local storage");
+        return{data,isLoading,error};
+      }
+      const abortCont = new AbortController();
         fetch(url,{signal: abortCont.signal})
         .then(res =>{
           if(!res.ok){
@@ -17,9 +24,12 @@ const useFetch = (url) => {
           return res.json();
         })
         .then(data => {
-          setData(data);
-          setIsLoading(false);
-          setError(null);
+
+            setData(data);
+            setIsLoading(false);
+            setError(null);
+            localStorage.setItem('countries',JSON.stringify(data));
+          
         })
         .catch(err=>{
           if(err.name==='AbortError'){
