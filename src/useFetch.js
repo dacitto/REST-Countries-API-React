@@ -28,7 +28,7 @@ const useFetch = (url,name) => {
             setData(data);
             setIsLoading(false);
             setError(null);
-            localStorage.setItem('countries',JSON.stringify(data));
+            localStorage.setItem(name,JSON.stringify(data));
           
         })
         .catch(err=>{
