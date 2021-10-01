@@ -11,11 +11,17 @@
   --Light-Mode-Input:#858585;
   --Light-Mode-Background:hsl(0, 0%, 98%);
   --white:#fff;
+  --dark:#333
+    
+;
 }
 
-:root .dark-mode {
+body.dark-mode {
   --Light-Mode-Background:var(--Dark-Mode-Background);
   --Light-Mode-Elements:var(--Dark-Mode-Elements);
+  --white:var(--dark)
+    
+;
 }
 
 body {
@@ -60,6 +66,7 @@ body * {
 }
 
 .header .container {
+  color: var(--Light-Mode-Text);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -7,6 +7,7 @@ import Country from './Country';
 import {useState} from "react"
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 function App() {
+
   const [search,setSearch]=useState('');
   const [select,setSelect]=useState('');
   return (
@@ -15,7 +16,7 @@ function App() {
       <Header></Header>
       <Switch>
       <Route exact path="/">
-          <Search setSearch={setSearch}  setSelect={setSelect}/>
+          <Search setSearch={setSearch}  setSelect={setSelect} search={search}/>
           <Home filter={search} region={select}/>
       </Route>
       <Route  path="/country">
